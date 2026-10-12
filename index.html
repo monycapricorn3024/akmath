@@ -217,7 +217,7 @@ function tip(t){gi("tip").textContent=fl(cur)[t]||"لا يوجد محتوى له
 function render(){applyBg();gi("app").innerHTML=ex!==null?exam():(cur===null?home():lesson());document.title=S.name;if(!ed)window.scrollTo(0,0)}
 window.onhashchange=function(){adm=false;ed=null;render()};
 render();
-if(LOGO){var ic=document.createElement("link");ic.rel="icon";ic.href=LOGO;document.head.appendChild(ic)}
+if(LOGO){var fav=document.createElement("link");fav.rel="icon";fav.href=LOGO;document.head.appendChild(fav)}
 </script>
 </body>
 </html>
