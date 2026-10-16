@@ -32,6 +32,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 .dot.on{background:var(--ok);border-color:var(--ok)}
 .sm{font:inherit;font-size:.9rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:0 12px;cursor:pointer}
 .back{font:inherit;background:none;border:0;color:var(--mut);cursor:pointer;padding:0;margin-bottom:10px}
+.homeb{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;padding:9px 18px;border-radius:12px;border:1.5px solid var(--ink);background:var(--hi);color:#14213d;cursor:pointer;margin-bottom:12px}
+.homeb svg{flex:none}
 .txt{font-size:1.1rem;max-width:60ch;white-space:pre-wrap}
 .q{margin-top:18px;font-weight:700}
 .opt{display:block;width:100%;text-align:right;font:inherit;color:inherit;background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:8px;cursor:pointer}
@@ -251,7 +253,7 @@ h+='<div style="margin-top:14px">'+bioBox()+'</div>';h+='<div style="margin-top:
 return h}
 function gradeView(){
 var L=gl(),n=L.filter(function(l){return done[l.id]}).length,h=head()+adminBox();
-h+='<button class="back" onclick="pg=null;render()">الرئيسية</button><div><h2 style="margin-top:0">'+e(pg)+'</h2></div>';
+h+='<button class="homeb" onclick="pg=null;render()" aria-label="Home"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><div><h2 style="margin-top:0">'+e(pg)+'</h2></div>';
 h+='<div class="sw" style="margin:10px 0 12px">'+TERMS.map(function(t,i){return '<button class="sm" style="padding:6px 14px" aria-pressed="'+(t==S.ct)+'" onclick="S.ct=TERMS['+i+'];save();render()">'+t+'</button>'}).join('')+'</div>';
 h+='<div class="prog"><b>أنجزتَ '+n+' من '+L.length+' دروس</b><div class="bar"><i style="width:'+(L.length?n/L.length*100:0)+'%"></i></div></div>';
 if(!L.length)h+='<p>لا توجد دروس في هذا الترم بعد.</p>';
