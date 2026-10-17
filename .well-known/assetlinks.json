@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "site.akmath.app",
+        "sha256_cert_fingerprints": ["D7:7D:6E:9D:4E:01:E1:A7:45:F9:7A:D7:18:E8:68:AF:8C:E0:48:18:19:54:68:1A:7E:CE:56:CC:76:3F:67:B3"]
+      }
+    }]
