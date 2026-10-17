@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14213d">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>منصة الرياضيات</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Reem+Kufi:wght@600&family=Caveat:wght@500&family=Playpen+Sans+Arabic:wght@400;500&family=Cairo:wght@500&family=Amiri:wght@400&family=Aref+Ruqaa:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -286,6 +289,7 @@ window.onhashchange=function(){adm=false;ed=null;render()};
 render();
 if(LOGO){var fav=document.createElement("link");fav.rel="icon";fav.href=LOGO;document.head.appendChild(fav)}
 window.addEventListener("load",fbInit);
+if("serviceWorker" in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
 </script>
 </body>
 </html>
